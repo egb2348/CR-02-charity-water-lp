@@ -12,8 +12,35 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      /* Use Proxima Nova first, then Avenir, then Arial if others are not available */
+      font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
       color: white;
+    }
+
+    /* Simple navigation bar styles for beginners */
+    .top-nav {
+      text-align: center;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    .nav-button {
+      background-color: transparent; /* No background color */
+      color: black; /* Black font color */
+      border: none;
+      border-radius: 6px;
+      padding: 8px 18px;
+      margin: 0 18px; /* Bigger space between buttons */
+      font-size: 1em;
+      font-family: inherit;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .nav-button:hover {
+      background-color: #FFC907; /* Charity: Water yellow on hover */
+      color: #222;
     }
 
     /* Hero section */
@@ -37,32 +64,50 @@
 
     /* Logo */
     .logo {
-      /* No background color, just the image */
-      display: inline-block;
-      padding: 0;
-      border-radius: 4px;
+      /* Move the logo background to the left and make it smaller */
+      background: rgba(255, 247, 225, 0.5); /* #FFF7E1 with 50% opacity */
+      display: block;
+      max-width: 320px;
+      margin: 0 auto 12px 0; /* Align left, space below */
+      padding: 4px;
+      border-radius: 8px;
       font-size: 12px;
       color: black;
       font-weight: bold;
-      margin-top: -20px; /* Negative margin moves logo closer to the top */
-      margin-bottom: 12px; /* Small space below logo */
     }
 
     /* Text box */
     .content {
-      /* Add a semi-transparent background to help text stand out */
-      background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+      /* Add a semi-transparent dark blue background to help text stand out */
+      background: rgba(0, 51, 102, 0.45); /* Dark blue with 45% opacity */
       max-width: 500px;
-      margin: auto 0 auto auto; /* pushes it to the right */
-      text-align: left;
+      margin: auto 0 auto auto; /* Position the box on the right side again */
+      text-align: left; /* Box content is left-aligned by default */
       padding: 24px; /* Add some space inside the box */
       border-radius: 8px; /* Rounded corners */
+    }
+    /* Center only the CTA button inside the blue backdrop */
+    .cta-button {
+      background-color: #FFC907; /* Changed to bright yellow */
+      color: black;
+      font-weight: bold;
+      padding: 12px 8px; /* Smaller left/right padding: 12px top/bottom, 8px left/right */
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+      display: block; /* Make the button take up the full line */
+      margin: 0 auto; /* Center the button horizontally */
+      text-align: center; /* Center the button text */
+    }
+
+    .content * {
+      /* Remove centering for all content inside the box */
     }
 
     .content h1 {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #FFD100; /* Bright yellow */
+      color: #FFC907; /* Changed to bright yellow */
       margin-bottom: 20px;
       line-height: 1.2;
     }
@@ -75,19 +120,13 @@
     }
 
     /* Button */
-    .cta-button {
-      background-color: #FFD100;
-      color: black;
-      font-weight: bold;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background 0.3s;
-      display: inline-block;
-    }
-
     .cta-button:hover {
       background-color: #e6bd00;
+    }
+
+    /* Make all h2 headings a light yellow color */
+    h2 {
+      color: #FFF7E1;
     }
 
     /* Mobile responsiveness */
@@ -105,19 +144,27 @@
   </style>
 </head>
 <body>
+  <!-- Simple navigation bar at the top -->
+  <nav class="top-nav">
+    <!-- Navigation buttons -->
+    <a href="#" class="nav-button">Our Mission</a>
+    <a href="#" class="nav-button">Take Action</a>
+    <a href="#" class="nav-button">Why Water?</a>
+  </nav>
+
   <!-- Make sure charity-water.jpg is in the same folder as this file -->
   <section class="hero">
     <!-- Logo back inside the hero section -->
     <div class="logo">
-      <!-- You can change the height value to make the logo image bigger or smaller -->
-      <img src="img/logo.png" alt="Charity Water Logo" style="height:200px;">
+      <!-- Logo image is now smaller (height: 180px) and aligned left -->
+      <img src="img/logo.png" alt="Charity Water Logo" style="height:180px;">
     </div>
 
     <!-- Main Content -->
     <div class="content">
       <h1>Small choice.<br>Massive Impact.</h1>
       <p>For the price of a cup of coffee, you can bring clean water to a family in need—and we will prove it with photos, GPS updates, and project stories. Giving back has never been this simple.</p>
-      <a href="#" class="cta-button">Do Some Good</a>
+      <a href="#" class="cta-button">Let's Do Some Good</a>
     </div>
   </section>
 </body>
