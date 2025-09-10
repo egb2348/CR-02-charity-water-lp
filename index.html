@@ -1,47 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity: Water Landing Page</title>
+  <style>
+    /* Reset some default browser styles */
+    body, h1, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Hero section */
+    .hero {
+      /* Set a sample image as the background so you can see how it works */
+      /* You can replace this link with your own image file later */
+      background-image: url('charity water image .jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #222; /* Fallback color if image is missing */
+      margin-top: 0; /* Remove space above the hero section */
+    }
+
+    /* If you want to use your own image, put charity-water.jpg in the same folder as index.html and change the line above to: */
+    /* background-image: url('charity-water.jpg'); */
+
+    /* Logo */
+    .logo {
+      /* No background color, just the image */
+      display: inline-block;
+      padding: 0;
+      border-radius: 4px;
+      font-size: 12px;
+      color: black;
+      font-weight: bold;
+      margin-top: -20px; /* Negative margin moves logo closer to the top */
+      margin-bottom: 12px; /* Small space below logo */
+    }
+
+    /* Text box */
+    .content {
+      /* Add a semi-transparent background to help text stand out */
+      background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+      max-width: 500px;
+      margin: auto 0 auto auto; /* pushes it to the right */
+      text-align: left;
+      padding: 24px; /* Add some space inside the box */
+      border-radius: 8px; /* Rounded corners */
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #FFD100; /* Bright yellow */
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+
+    /* Button */
+    .cta-button {
+      background-color: #FFD100;
+      color: black;
+      font-weight: bold;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background-color: #e6bd00;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .content {
+        max-width: 100%;
+        margin: 40px auto;
+        text-align: center;
+      }
+
+      .content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <!-- Make sure charity-water.jpg is in the same folder as this file -->
+  <section class="hero">
+    <!-- Logo back inside the hero section -->
+    <div class="logo">
+      <!-- You can change the height value to make the logo image bigger or smaller -->
+      <img src="img/logo.png" alt="Charity Water Logo" style="height:200px;">
+    </div>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+    <!-- Main Content -->
+    <div class="content">
+      <h1>Small choice.<br>Massive Impact.</h1>
+      <p>For the price of a cup of coffee, you can bring clean water to a family in need—and we will prove it with photos, GPS updates, and project stories. Giving back has never been this simple.</p>
+      <a href="#" class="cta-button">Do Some Good</a>
+    </div>
+  </section>
 </body>
 </html>
